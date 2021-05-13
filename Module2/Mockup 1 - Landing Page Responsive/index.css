@@ -1,0 +1,251 @@
+
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+body{
+    background: #E5E5E5;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    display: inline-block;
+
+}
+.menu ul li a{
+    display: block;
+    padding: 40px;
+    text-decoration: none;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+
+
+    color: #404040;
+
+    
+}
+.menu .containerTitle{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px;
+}
+.menu .containerTitle .title{
+    display: flex;
+    padding: 20px;
+    width: 170px;
+    height: 25px;
+    left: 87px;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 25px;
+
+    color: #1AA29C;
+}
+.menu .containerTitle .title .verde{color: #1AA29C;}
+.menu .containerTitle .title .grigio{color: #404040;}
+.menu .containerTitle .imm{
+
+    width: 50px;
+    height: 50px;
+    left: 21px;
+    border-radius: 25%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-image: url(logo.png);       
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+
+}
+
+.hero .imm{
+    position: static;
+    width: 612px;
+    height: 467px;
+    right: 0px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 78px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(HeroImage.png);  
+}
+.hero .left{
+    width: 626px;
+    height: 362px;
+    left: 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 78px;
+}
+
+.hero .left .section{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .left .section .title{
+    display: flex;
+    flex-direction: row;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 46.15%;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 77px;
+
+    color: #404040;
+}
+.hero .left .section .title .verde{
+    color: #1AA29C;
+}
+.hero .left .section .title .grigio{
+    color: #404040;
+}
+.hero .left .section .subtitle{
+    margin: 20px 0px;
+    left: 0.57%;
+    right: 0%;
+    top: 67.83%;
+    bottom: 0%;
+
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #404040;
+}
+.hero .left .container{
+    margin: 20px 0px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    width: 611px;
+    height: 111px;
+    right: 0px;
+    bottom: 69px;
+
+    background: #FFFFFF;
+    box-shadow: 5px 10px 24px rgba(26, 162, 156, 0.24);
+    border-radius: 14px;
+}
+.hero .left .container .text{
+    display: flex;
+    left: 17.36%;
+    right: 43.94%;
+    top: 27.16%;
+    bottom: 49.38%;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #404040;
+}
+.hero .left .container .text .numero{
+    font-size: 38px;
+}
+.hero .left .container progress{
+    margin:20px 0px;
+    width: 100%;
+
+}
+
+.hero .left .container .goalContainer .goal{
+
+    left: 75.41%;
+    right: 0%;
+    top: 76.54%;
+    bottom: 0%;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+
+    color: #D3D3D5;
+}
+.hero .tasto{
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+.hero .tasto button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 9px 12px;
+    margin: 20px;
+    width: 110px;
+    height: 37px;
+    right: 0px;
+    bottom: 0px;
+
+    background: #1AA29C;
+    border-radius: 5px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+}
+
+@media(max-width:600px)
+{
+    .menu{
+        justify-content: center;
+    }
+    .menu ul{
+        display: none;
+        
+    }
+    .hero .imm{
+        display: none;
+    }
+    .hero .left{
+        width: 300px;
+        height: 362px;
+        left: 0px;
+    }
+    .hero .left .container{
+        
+        width: 311px;
+        height: 111px;
+        
+    }
+    .hero .tasto button{
+        margin: 20px 0px;
+    }
+}
