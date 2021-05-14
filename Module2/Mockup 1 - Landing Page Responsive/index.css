@@ -6,6 +6,8 @@
  }
 body{
     background: #E5E5E5;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu{
@@ -43,25 +45,22 @@ body{
 .menu .containerTitle .title{
     display: flex;
     padding: 20px;
-    width: 170px;
-    height: 25px;
-    left: 87px;
+
 
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
     line-height: 25px;
-
+    
     color: #1AA29C;
 }
-.menu .containerTitle .title .verde{color: #1AA29C;}
 .menu .containerTitle .title .grigio{color: #404040;}
 .menu .containerTitle .imm{
 
     width: 50px;
     height: 50px;
-    left: 21px;
+
     border-radius: 25%;
     background-position: center;
     background-repeat: no-repeat;
@@ -72,32 +71,23 @@ body{
 
 .hero{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
 }
 
 .hero .imm{
-    position: static;
-    width: 612px;
-    height: 467px;
-    right: 0px;
-    flex: none;
     order: 1;
-    flex-grow: 0;
     margin: 0px 78px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(HeroImage.png);  
+    width: 50%;
+    flex-basis: 50%;
+
 }
 .hero .left{
-    width: 626px;
-    height: 362px;
-    left: 0px;
-    flex: none;
     order: 0;
-    flex-grow: 0;
     margin: 78px;
+    width: 50%;
+    flex-basis: 50%;
+
 }
 
 .hero .left .section{
@@ -106,12 +96,7 @@ body{
 }
 
 .hero .left .section .title{
-    display: flex;
-    flex-direction: row;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 46.15%;
+
 
     font-family: Inter;
     font-style: normal;
@@ -124,15 +109,9 @@ body{
 .hero .left .section .title .verde{
     color: #1AA29C;
 }
-.hero .left .section .title .grigio{
-    color: #404040;
-}
 .hero .left .section .subtitle{
     margin: 20px 0px;
-    left: 0.57%;
-    right: 0%;
-    top: 67.83%;
-    bottom: 0%;
+
 
     font-family: Source Sans Pro;
     font-style: normal;
@@ -147,21 +126,12 @@ body{
     padding: 13px;
     display: flex;
     flex-direction: column;
-    width: 611px;
-    height: 111px;
-    right: 0px;
-    bottom: 69px;
-
     background: #FFFFFF;
     box-shadow: 5px 10px 24px rgba(26, 162, 156, 0.24);
     border-radius: 14px;
 }
 .hero .left .container .text{
-    display: flex;
-    left: 17.36%;
-    right: 43.94%;
-    top: 27.16%;
-    bottom: 49.38%;
+
 
     font-family: Inter;
     font-style: normal;
@@ -182,10 +152,6 @@ body{
 
 .hero .left .container .goalContainer .goal{
 
-    left: 75.41%;
-    right: 0%;
-    top: 76.54%;
-    bottom: 0%;
     font-family: Inter;
     font-style: normal;
     font-weight: 600;
@@ -202,14 +168,13 @@ body{
 }
 .hero .tasto button{
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     padding: 9px 12px;
     margin: 20px;
     width: 110px;
-    height: 37px;
-    right: 0px;
-    bottom: 0px;
+
 
     background: #1AA29C;
     border-radius: 5px;
@@ -225,7 +190,7 @@ body{
 @media(max-width:600px)
 {
     .menu{
-        justify-content: center;
+        justify-content: right;
     }
     .menu ul{
         display: none;
@@ -247,5 +212,11 @@ body{
     }
     .hero .tasto button{
         margin: 20px 0px;
+    }
+    .hero .left .container .text{
+        font-size: 14px;
+    }
+    .hero .left .container .text .numero{
+        font-size: 28px;
     }
 }
