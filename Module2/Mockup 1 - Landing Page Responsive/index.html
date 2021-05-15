@@ -1,46 +1,3 @@
-<!--
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Module 0</title>
-            <link rel="stylesheet" type="text/css" href="index.css">
-    </head>
-    <body>
-        <header>
-            <div class="container container-nav">
-                <div class ="site-title">
-                    <img src="logo.png">
-                    <div class="title">#IORESTOACASA</div>
-                   
-                </div>
-                <nav>
-                    <ul> 
-                        <li><a href="#">Chi siamo</a></li>
-                        <li><a href="#">Contattaci</a></li>
-                    </ul>
-                </nav>  
-            </div>
-        </header>
-           
-    </body>
-</html>
--->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!DOCTYPE html>
 
@@ -48,56 +5,73 @@
     <head>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-            </style>
+            @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+        </style>
         <link rel="stylesheet" type="text/css" href="index.css">
+        <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
     </head>
     <body>
-        
-        <div class="menu">
-            <div class="containerTitle">
-                <div class="title">
-                #<span class="grigio">IORESTOA</span>CASA
-                </div>
-                <div class="imm"></div>
-            </div>
-            <ul>
-                <li><a href="#" class="item">Chi siamo</a></li>
-                <li><a href="#" class="item">Contattaci</a></li>
-            </ul>
-        </div>
-
-        <div class="hero">
-            <img class="imm" src="HeroImage.svg" >
-            <div class="left">
-                <div class="section">
-                    <div class="title">Restiamo a <span class="verde"> casa</span>.</div>
-                    <div class="subtitle">È arrivato il momento di adottare un comportamento responsabile e farsi carico dei propri doveri come cittadino e come individuo.</div>
-                </div>
-                <div class="container">
-                    <div class="text">
-                        <span class="numero">1072</span> Persone si sono fatte avanti
+        <div id="root"></div>
+        <script type="text/babel">
+            function Menu(){
+                return (
+                    <div className="menu">
+                        <div className="containerTitle">
+                            <div className="title">
+                            #<span className="grigio">IORESTOA</span>CASA
+                            </div>
+                            <div className="imm"></div>
+                        </div>
+                        <ul>
+                            <li><a href="#" className="item">Chi siamo</a></li>
+                            <li><a href="#" className="item">Contattaci</a></li>
+                        </ul>
                     </div>
-                    <progress value=66 max=100></progress>
-                    <div class="goalContainer"><div class="goal">arriviamo a 5 mila</div></div>
-                </div>
-                <div  class="tasto">
-                <button>Unisciti
-                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.50001 17.9167C13.8723 17.9167 17.4167 14.3723 17.4167 10C17.4167 5.62774 13.8723 2.08333 9.50001 2.08333C5.12776 2.08333 1.58334 5.62774 1.58334 10C1.58334 14.3723 5.12776 17.9167 9.50001 17.9167Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9.5 13.1667L12.6667 9.99999L9.5 6.83333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.33334 10H12.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                </div>
+                )
+            }
+            function Hero(){
+                return(
+                    <div className="hero">
+                        <img className="imm" src="HeroImage.svg" ></img>
+                        <div className="left">
+                            <div className="section">
+                                <div className="title">Restiamo a<span className="verde"> casa</span>.</div>
+                                <div className="subtitle">È arrivato il momento di adottare un comportamento responsabile e farsi carico dei propri doveri come cittadino e come individuo.</div>
+                            </div>
+                            <div className="container">
+                                <div className="text">
+                                    <span className="numero">1072</span> Persone si sono fatte avanti
+                                </div>
+                                <progress value={66} max={100}></progress>
+                                <div className="goalContainer"><div className="goal">arriviamo a 5 mila</div></div>
+                            </div>
+                            <div  className="tasto">
+                            <button>Unisciti
+                            <img src="freccia.svg"></img>
+                            </button>
+                            </div>
 
-            </div>
-        </div>
-        <!--
-        <footer>
-            <div class="Powered">
-                <div>powered by</div>
-                <img src="JetopLogo.png">
-            </div>
-        </footer>-->
+                        </div>
+                    </div>
+                )
+            }
+            function Footer(){
+                return (
+                    <div className="powered">
+                        <div className="text">powered by</div>
+                        <img src="Jetoplogo.svg"></img>
+                    </div>
+                )
+            }
+            const element=<><Menu></Menu><Hero></Hero><Footer></Footer></>;
+            ReactDOM.render(element, document.getElementById('root'));
+        </script>
+        
+
+        
+
     </body>
 </html>
