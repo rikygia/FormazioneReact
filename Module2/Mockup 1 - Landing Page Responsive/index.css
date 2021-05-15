@@ -210,7 +210,7 @@ body{
     color: #D3D3D5;
 
 }
-@media(max-width:400px)
+@media(max-width:600px)
 {
     .menu{
         justify-content: right;
@@ -241,5 +241,9 @@ body{
     }
     .hero .left .container .text .numero{
         font-size: 28px;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
     }
 }
