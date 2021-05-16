@@ -148,9 +148,11 @@ body{
 .hero .left .container .text .numero{
     font-size: 38px;
 }
+
 .hero .left .container progress{
     margin:20px 0px;
     width: 100%;
+
 
 }
 
@@ -191,11 +193,14 @@ body{
     color: #FFFFFF;
 }
 
+footer{
+    display: flex;
+    justify-content: flex-end;
+}
 .powered{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
+    margin-right: 20px;
 }
 .powered .text{
     padding-top: 15px;

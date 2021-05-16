@@ -2,6 +2,8 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    transition-duration: 0.4s;
+
 }
 
 .container{
@@ -13,6 +15,7 @@
     height: 667px;
     color: white;
     background: #006460;
+   
 }
 
 .container .img-container{
@@ -20,6 +23,7 @@
     flex-direction: column;
     justify-content: center; 
     margin: 50px;
+
 }
 
 .container .img-container .cont{
@@ -73,6 +77,9 @@
     height: 42px;
     background-color: #FFFFFF;
     border-radius: 8px;
+
+    border: none;
+    
 }
 
 .container .button-container button:hover{
