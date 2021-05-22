@@ -4,22 +4,68 @@
         <link rel="stylesheet" type="text/css" href="index.css">
     </head>
     <body>
-        <div class="container">
-            <div class="img-container">
-                <img class="immage" src="image1.svg">
-                <div class="cont"><img class="puntini" src="puntini.svg"></div>
-            </div>
-            <div class="text-container">
-                <div class="title">
-                    ONBOARDING
+        <div class="container-all">
+            <div class="container" id="pag1">
+                <div class="img-container">
+                    <img class="image" src="image1.svg">
+                    <img class="puntini" src="puntini1.svg">
                 </div>
-                <div class="text">
-                    Con questo progetto imparerai alcune delle funzionalità avanzate del css e inizierai ad utilizzare javascript per far prendere vita alla web app.
+                <div class="text-container">
+                    <div class="title">
+                        ONBOARDING
+                    </div>
+                    <div class="text">
+                        Con questo progetto imparerai alcune delle funzionalità avanzate del css e inizierai ad utilizzare javascript per far prendere vita alla web app.
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button onclick=myFunction()>Avanti</button>
                 </div>
             </div>
-            <div class="button-container">
-                <button>Avanti</button>
+            <div class="container" id="pag2">
+                <div class="img-container">
+                    <img class="image" src="image2.svg">
+                    <div class="cont"><img class="puntini" src="puntini2.svg"></div>
+                </div>
+                <div class="text-container">
+                    <div class="title">
+                        TRANSITION, FLEX E MOLTO ALTRO
+                    </div>
+                    <div class="text">
+                        Dovrai utilizzare flexbox per organizzare i componenti nelle varie schermate. Inizierai ad aggiungere animazioni semplici grazie all’attributo transition
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button onclick=myFunction()>Avanti</button>
+                </div>
+            </div>
+            <div class="container" id="pag3">
+                <div class="img-container">
+                    <img class="image" src="image3.svg">
+                    <div class="cont"><img class="puntini" src="puntini3.svg"></div>
+                </div>
+                <div class="text-container">
+                    <div class="title">
+                        SEI HAI DEI DUBBI, CHIEDI!
+                    </div>
+                    <div class="text">
+                        CSS non è semplice da imparare. Non esitare dunque a contattare un’altro IT per chiedere consigli.
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button onclick=myFunction()>Avanti</button>
+                </div>
             </div>
         </div>
+        <script>
+            function myFunction() {
+                const pag1=document.getElementById("pag1");
+                const pag2=document.getElementById("pag2");
+                const pag3=document.getElementById("pag3");
+                pag2.id="pag1"
+                pag3.id="pag2"
+                pag1.id="pag3"
+            }
+            </script>
     </body>
 </html>

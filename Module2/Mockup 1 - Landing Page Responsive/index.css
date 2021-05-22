@@ -17,6 +17,7 @@ body{
 .menu{
     display: flex;
     justify-content: space-between;
+
 }
 .menu ul{
     list-style: none;
@@ -45,6 +46,7 @@ body{
     display: flex;
     flex-direction: row-reverse;
     padding: 20px;
+    align-items: center;
 }
 .menu .containerTitle .title{
     display: flex;
@@ -81,14 +83,13 @@ body{
 
 .hero .imm{
     order: 1;
-    margin: 0px 78px;
     width: 50%;
     flex-basis: 50%;
 
 }
 .hero .left{
     order: 0;
-    margin: 78px;
+    margin: 50px;
     width: 50%;
     flex-basis: 50%;
 
@@ -126,27 +127,26 @@ body{
     color: #404040;
 }
 .hero .left .container{
-    margin: 20px 0px;
-    padding: 13px;
     display: flex;
     flex-direction: column;
     background: #FFFFFF;
     box-shadow: 5px 10px 24px rgba(26, 162, 156, 0.24);
     border-radius: 14px;
+    padding: 10px;
 }
 .hero .left .container .text{
 
-
+    padding: 5px;
     font-family: Inter;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 19px;
 
     color: #404040;
 }
 .hero .left .container .text .numero{
-    font-size: 38px;
+    font-size: 26px;
 }
 
 .hero .left .container progress{
@@ -203,19 +203,19 @@ footer{
     margin-right: 20px;
 }
 .powered .text{
-    padding-top: 15px;
+    padding-top: 16px;
     padding-right: 5px;
     font-family: Source Code Pro;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18px;
     text-align: right;
     letter-spacing: 0.26em;
     color: #D3D3D5;
 
 }
-@media(max-width:600px)
+@media(max-width:690px)
 {
     .menu{
         justify-content: right;

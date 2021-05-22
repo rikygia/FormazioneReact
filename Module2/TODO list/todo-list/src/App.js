@@ -1,59 +1,35 @@
-import * as React from 'react'
+import  {useReducer,createContext}  from 'react'
+import  {ListInfo} from "./Components/ListInfo.js"
+import  {Form} from "./Components/Form.js"
 import './App.css';
 
-const ListContext=React.createContext();
+const ListContext=createContext();
 
-
-function Form(){
-  const [,dispatch]=React.useContext(ListContext);
-  const [element,setElement]=React.useState('mele');
-  function handleChange(e) {
-    setElement(e.target.value)
-  }
-
-  return (
-    <div className="form-container">
-      <input type="text" value={element} onChange={handleChange}></input>
-      <button onClick={()=>dispatch({action:"ADD",dati:element})}>Aggiungi</button>
-    </div>
-  )
-}
-
-function ListInfo(){
-  const [lista,dispatch]=React.useContext(ListContext)
-  return (
-    <div className="info-container">
-      <ul>
-        {Object.keys(lista).map((elem)=>
-        <li key={elem}>
-        {lista[elem]}
-        <button onClick={ ()=>dispatch({action:"DELETE",dati:lista[elem]}) }>Cancella</button>
-        <input type={"checkbox"}></input>
-        </li>)}
-      </ul>
-    </div>
-  )
-}
+const init=[{elemento:"banana",id:0},{elemento:"pera",id:1},{elemento:"ananas",id:2}]
+let cont=init.length;
 function aggiungiLista(lista,elemento){
   if (elemento.action==="DELETE")
-  {
-    return lista.filter((elem)=>elem!==elemento.dati)
+  { 
+    const dup=[...lista]
+    dup.splice(elemento.index,1);
+
+    return [...dup];
   }
   if (elemento.action==="ADD")
   {
     if(elemento.dati!=="")
-      return [...lista,elemento.dati];
+      return [...lista,{elemento:elemento.dati,id:cont++}];
   }
 }
 function App() {
-  const value=React.useReducer(aggiungiLista,[])
+  const value=useReducer(aggiungiLista,init)
   return (
     <div className="container">
     <ListContext.Provider value={value}>
-      <Form>
+      <Form ListContext={ListContext}>
 
       </Form>
-      <ListInfo>
+      <ListInfo ListContext={ListContext}>
 
       </ListInfo>
     </ListContext.Provider>
